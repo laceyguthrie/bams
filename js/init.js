@@ -1,19 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('ready');
 
-    // Ticker - cycles through services list (respects reduced motion preference)
-    const ticker = document.querySelector('.js-ticker');
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
-    if (ticker && !prefersReducedMotion) {
-        setInterval(function() {
-            const firstItem = ticker.firstElementChild;
-            if (firstItem) {
-                ticker.appendChild(firstItem);
-            }
-        }, 600);
-    }
-
     // Fleeing link - runs away from cursor (uses document listener since element has pointer-events: none)
     const fleeingLink = document.querySelector('.js-fleeing-link');
     if (fleeingLink) {
