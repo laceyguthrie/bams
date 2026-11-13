@@ -17,11 +17,11 @@
 }
 
 .bams-contact__list li {
-    font-size: clamp(0.875rem, 2vw, 1.125rem);
+    font-size: clamp(0.75rem, 1.5vw, 0.9375rem);
     line-height: 1.6;
     font-weight: 500;
 }
 
 .bams-contact__dept {
-    color: #dfff21;
+    color: var(--accent);
 }

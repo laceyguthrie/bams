@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --accent: #7fb0a8;
+    --highlight: #dfff21;
+}
+
 html {
     line-height: 1.2;
     -webkit-text-size-adjust: 100%;
@@ -266,12 +271,12 @@ template {
 }
 
 .bams-header__link[aria-current="page"] {
-    color: #dfff21;
+    color: var(--accent);
 }
 
 @media (hover: hover) {
     .bams-header__link:hover {
-        color: #dfff21;
+        color: var(--highlight);
     }
 }
 

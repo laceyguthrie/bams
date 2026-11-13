@@ -45,8 +45,8 @@
     font-weight: 500;
     padding: 0.5rem 1rem;
     margin-top: 0.5rem;
-    background-color: #e5dfc8;
-    border: 1px solid #e5dfc8;
+    background-color: var(--accent);
+    border: 1px solid var(--accent);
     border-radius: 4px;
     color: #1a1a18;
     cursor: pointer;
@@ -90,11 +90,11 @@
 
 @media (hover: hover) {
     .bams-portal__form button:hover {
-        background-color: #dfff21;
-        border-color: #dfff21;
+        background-color: var(--highlight);
+        border-color: var(--highlight);
     }
 
     .bams-portal__link:hover {
-        color: #dfff21;
+        color: var(--highlight);
     }
 }
