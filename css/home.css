@@ -1,0 +1,52 @@
+/* Hero */
+.bams-hero {
+    height: calc(100vh - 7rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: #1a1a18;
+    overflow: hidden;
+}
+
+.bams-hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.bams-hero h2 {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
+    color: #e85d30;
+    font-size: clamp(2rem, 13vw, 7rem);
+    font-style: italic;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.bams-hero__ticker-container {
+    height: 21.6rem;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.bams-hero__ticker {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.bams-hero__ticker li {
+    font-size: 12px;
+    line-height: 1.6;
+    font-weight: 500;
+    color: #e5dfc8;
+}

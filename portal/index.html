@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Portal Login - Booking and Management Services">
+    <meta name="author" content="Booking and Management Services">
+    <meta name="robots" content="noindex, nofollow">
+    <meta property="og:title" content="Portal Login - Booking and Management Services">
+    <meta property="og:description" content="Portal Login - Booking and Management Services">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bookingandmanagementservices.com/portal">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Portal Login - Booking and Management Services">
+    <meta name="twitter:description" content="Portal Login - Booking and Management Services">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗄️</text></svg>">
+    <link rel="canonical" href="https://bookingandmanagementservices.com/portal">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Portal Login - Booking and Management Services</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body>
+    <header class="bams-header">
+        <h1 class="bams-header__title"><a href="/">Booking and Management Services</a></h1>
+        <nav>
+            <span class="bams-header__link bams-header__link--hover-devices-only js-fleeing-link" aria-hidden="true" title="If you really want to know, email someone@bookingandmanagementservices.com, subject: 'What are you?'">About</span>
+            <!-- <a href="/services" class="bams-header__link">Services</a> -->
+            <a href="/contact" class="bams-header__link">Contact</a>
+            <a href="/portal" class="bams-header__link" aria-current="page">Portal</a>
+        </nav>
+    </header>
+    <main>
+        <section class="bams-portal">
+            <h2 class="sr-only">Portal Login</h2>
+            <div id="bams-portal-login" class="bams-portal__login">
+                <form class="bams-portal__form" id="bams-portal-form" novalidate>
+                    <label for="bams-portal-login-email" class="bams-portal__label">Email address</label>
+                    <input type="email" id="bams-portal-login-email" name="email" autocomplete="off" required>
+                    <span class="bams-portal__error" id="bams-portal-login-email-error" hidden></span>
+                    <label for="bams-portal-password" class="bams-portal__label">Password</label>
+                    <input type="password" id="bams-portal-password" name="password" autocomplete="off" required>
+                    <span class="bams-portal__error" id="bams-portal-password-error" hidden></span>
+                    <button type="submit">Enter</button>
+                </form>
+                <button type="button" class="bams-portal__link" id="bams-portal-forgot-link">Forgot password?</button>
+            </div>
+            <div id="bams-portal-forgot" class="bams-portal__forgot" hidden>
+                <form class="bams-portal__form" id="bams-portal-forgot-form" novalidate>
+                    <label for="bams-portal-email" class="bams-portal__label">Enter your email address</label>
+                    <input type="email" id="bams-portal-email" name="email" autocomplete="off" required>
+                    <span class="bams-portal__error" id="bams-portal-email-error" hidden></span>
+                    <button type="submit">Submit</button>
+                </form>
+                <button type="button" class="bams-portal__link" id="bams-portal-back-link">Back to login</button>
+            </div>
+            <div id="bams-portal-warning" class="bams-portal__warning" hidden>
+                <p>We were unable to locate an account associated with this email address. Please verify your information and try again, or contact your account administrator for assistance.</p>
+                <button type="button" class="bams-portal__link" id="bams-portal-warning-back">Back to login</button>
+            </div>
+        </section>
+    </main>
+    <footer class="bams-footer">
+        <p>© 2026 Booking and Management Services</p>
+        <p>All inquiries are confidential.</p>
+    </footer>
+    <script src="../js/init.js"></script>
+    <script>
+        function showError(inputId, errorId, message) {
+            var input = document.getElementById(inputId);
+            var error = document.getElementById(errorId);
+            input.classList.add('bams-portal__input--error');
+            error.textContent = message;
+            error.hidden = false;
+        }
+
+        function clearError(inputId, errorId) {
+            var input = document.getElementById(inputId);
+            var error = document.getElementById(errorId);
+            input.classList.remove('bams-portal__input--error');
+            error.hidden = true;
+        }
+
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        document.getElementById('bams-portal-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var email = document.getElementById('bams-portal-login-email').value;
+            var password = document.getElementById('bams-portal-password').value;
+            var valid = true;
+
+            clearError('bams-portal-login-email', 'bams-portal-login-email-error');
+            clearError('bams-portal-password', 'bams-portal-password-error');
+
+            if (!email) {
+                showError('bams-portal-login-email', 'bams-portal-login-email-error', 'email required');
+                valid = false;
+            } else if (!isValidEmail(email)) {
+                showError('bams-portal-login-email', 'bams-portal-login-email-error', 'invalid email format');
+                valid = false;
+            }
+
+            if (!password) {
+                showError('bams-portal-password', 'bams-portal-password-error', 'password required');
+                valid = false;
+            }
+
+            if (!valid) return;
+
+            if (password === 'mallard') {
+                window.location.href = 'https://laceyguthrie.com/floppy-disk';
+            } else {
+                document.getElementById('bams-portal-password').value = '';
+                showError('bams-portal-password', 'bams-portal-password-error', 'try again');
+            }
+        });
+
+        document.getElementById('bams-portal-forgot-link').addEventListener('click', function() {
+            document.getElementById('bams-portal-login').hidden = true;
+            document.getElementById('bams-portal-forgot').hidden = false;
+            document.getElementById('bams-portal-warning').hidden = true;
+            clearError('bams-portal-login-email', 'bams-portal-login-email-error');
+            clearError('bams-portal-password', 'bams-portal-password-error');
+        });
+
+        document.getElementById('bams-portal-back-link').addEventListener('click', function() {
+            document.getElementById('bams-portal-login').hidden = false;
+            document.getElementById('bams-portal-forgot').hidden = true;
+            document.getElementById('bams-portal-warning').hidden = true;
+            clearError('bams-portal-email', 'bams-portal-email-error');
+        });
+
+        document.getElementById('bams-portal-warning-back').addEventListener('click', function() {
+            document.getElementById('bams-portal-login').hidden = false;
+            document.getElementById('bams-portal-forgot').hidden = true;
+            document.getElementById('bams-portal-warning').hidden = true;
+        });
+
+        document.getElementById('bams-portal-forgot-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var email = document.getElementById('bams-portal-email').value;
+
+            clearError('bams-portal-email', 'bams-portal-email-error');
+
+            if (!email) {
+                showError('bams-portal-email', 'bams-portal-email-error', 'email required');
+                return;
+            } else if (!isValidEmail(email)) {
+                showError('bams-portal-email', 'bams-portal-email-error', 'invalid email format');
+                return;
+            }
+
+            document.getElementById('bams-portal-login').hidden = true;
+            document.getElementById('bams-portal-forgot').hidden = true;
+            document.getElementById('bams-portal-warning').hidden = false;
+        });
+    </script>
+</body>
+</html>

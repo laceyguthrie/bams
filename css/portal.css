@@ -1,0 +1,100 @@
+/* Portal */
+.bams-portal {
+    height: calc(100vh - 7rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.bams-portal__form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    width: 280px;
+}
+
+.bams-portal__label {
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.bams-portal__form input {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #e5dfc8;
+    border-radius: 4px;
+    background: transparent;
+    color: #e5dfc8;
+}
+
+.bams-portal__form input::placeholder {
+    color: #e5dfc8;
+    opacity: 0.6;
+}
+
+.bams-portal__form button {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    background-color: #e5dfc8;
+    border: 1px solid #e5dfc8;
+    border-radius: 4px;
+    color: #1a1a18;
+    cursor: pointer;
+    transition: background-color 0.15s ease-out, color 0.15s ease-out;
+}
+
+.bams-portal__error {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    color: #e85d30;
+    margin-top: -0.25rem;
+}
+
+.bams-portal__input--error {
+    border-color: #e85d30;
+}
+
+.bams-portal__link {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    background: none;
+    border: none;
+    color: #e5dfc8;
+    cursor: pointer;
+    margin-top: 1rem;
+    text-decoration: underline;
+}
+
+.bams-portal__warning {
+    max-width: 520px;
+    text-align: center;
+}
+
+.bams-portal__warning p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+}
+
+@media (hover: hover) {
+    .bams-portal__form button:hover {
+        background-color: #dfff21;
+        border-color: #dfff21;
+    }
+
+    .bams-portal__link:hover {
+        color: #dfff21;
+    }
+}
