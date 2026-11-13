@@ -24,7 +24,7 @@
 }
 
 .bams-portal__form input {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
     font-size: 14px;
     font-weight: 500;
     padding: 0.5rem 0.75rem;
@@ -40,7 +40,7 @@
 }
 
 .bams-portal__form button {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
     font-size: 12px;
     font-weight: 500;
     padding: 0.5rem 1rem;
@@ -54,7 +54,7 @@
 }
 
 .bams-portal__error {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
     font-size: 10px;
     font-weight: 500;
     color: #e85d30;
@@ -66,7 +66,7 @@
 }
 
 .bams-portal__link {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
     font-size: 10px;
     font-weight: 500;
     background: none;

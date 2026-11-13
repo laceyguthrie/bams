@@ -17,7 +17,6 @@
 }
 
 .bams-hero h2 {
-    font-family: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
     color: #e85d30;
     font-size: clamp(2rem, 13vw, 7rem);
     font-style: italic;

@@ -32,7 +32,7 @@ html {
 body {
     margin: 0;
     padding-top: 3rem;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
     background-color: #1a1a18;
     color: #e5dfc8;
 }
@@ -236,7 +236,7 @@ template {
 }
 
 .bams-header__title {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
     font-size: 10px;
     line-height: 1.2;
     font-weight: 500;
@@ -252,7 +252,7 @@ template {
 .bams-header__link {
     display: block;
     padding: 0.25em 0.5em;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
     font-size: 12px;
     line-height: 1.1;
     font-weight: 500;
